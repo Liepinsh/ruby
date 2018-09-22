@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home: MyString
+  guests: MyString
+  homescore: 1
+  guestscore: 1
+  overtime: false
+
+two:
+  home: MyString
+  guests: MyString
+  homescore: 1
+  guestscore: 1
+  overtime: false

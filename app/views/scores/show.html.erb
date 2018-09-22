@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @score.home_team.full_name %>
+</p>
+
+<p>
+  <strong>Guests:</strong>
+  <%= @score.guest_team.full_name %>
+</p>
+
+<p>
+  <strong>Homescore:</strong>
+  <%= @score.home_score %>
+</p>
+
+<p>
+  <strong>Guestscore:</strong>
+  <%= @score.guest_score %>
+</p>
+
+<p>
+  <strong>Overtime:</strong>
+  <%= @score.overtime %>
+</p>
+
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>
