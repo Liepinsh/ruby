@@ -16,3 +16,12 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function() {
+    setInterval(function(){
+        $.ajax({
+            url: "/scores/ajax_score"
+        }).done(function(scores) {
+            console.log(scores[0].home_team_id);
+        });
+    }, 3000);
+});

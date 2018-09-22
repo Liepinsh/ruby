@@ -7,6 +7,11 @@ class ScoresController < ApplicationController
     @scores = Score.all
   end
 
+  def ajax_score
+    @scores = Score.all
+    render json: @scores
+  end
+
   # GET /scores/1
   # GET /scores/1.json
   def show
