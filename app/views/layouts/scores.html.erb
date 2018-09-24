@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hockey</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'scores', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <a href="/teams">Team</a>
+    <a href="/players">Players</a>
+    <a href="/scores">Scores</a>
+    <%= yield %>
+  </body>
+</html>

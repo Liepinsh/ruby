@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :team %>
-    <%= form.collection_select(:team_id, Team.all, :id, :full_name, prompt: true) %>
+    <%= form.collection_select :team_id, Team.all, :id, :full_name, prompt: true %>
   </div>
 
   <div class="actions">

@@ -20,16 +20,17 @@
 
   <tbody>
     <% @scores.each do |score| %>
-      <tr>
-        <td><%= score.home_team.full_name %></td>
-        <td><%= score.guest_team.full_name %></td>
-        <td><%= score.home_score %></td>
-        <td><%= score.guest_score %></td>
-        <td><%= score.overtime %></td>
+      <tr data-score-id="<%= score.id %>">
+        <td data-score-attribute="home_team_full_name"><%= score.home_team.full_name %></td>
+        <td data-score-attribute="guest_team_full_name"><%= score.guest_team.full_name %></td>
+        <td data-score-attribute="home_score"><%= score.home_score %></td>
+        <td data-score-attribute="guest_score"><%= score.guest_score %></td>
+        <td data-score-attribute="overtime"><%= score.overtime %></td>
         <td><%= score.winner_team&.full_name %></td>
         <td><%= score.points_for_winning_team %></td>
         <td><%= score.loser_team&.full_name %></td>
         <td><%= score.points_for_loser_team %></td>
+
         <td><%= link_to 'Show', score %></td>
         <td><%= link_to 'Edit', edit_score_path(score) %></td>
         <td><%= link_to 'Destroy', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>

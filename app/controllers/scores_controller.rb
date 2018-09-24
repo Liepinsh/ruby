@@ -7,9 +7,10 @@ class ScoresController < ApplicationController
     @scores = Score.all
   end
 
-  def ajax_score
+  # .to_json include, is going to allow to receive full name from the team, not just the id number
+  def ajax_scores
     @scores = Score.all
-    render json: @scores
+    render json: @scores.to_json(include: { home_team: { methods: [:full_name] }, guest_team: { methods: [:full_name]}})
   end
 
   # GET /scores/1
