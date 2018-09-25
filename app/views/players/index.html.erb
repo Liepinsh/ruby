@@ -1,35 +1,46 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Players</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Number</th>
-      <th>Position</th>
-      <th>Club</th>
-      <th>Team</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <p id="notice"><%= notice %></p>
 
-  <tbody>
-    <% @players.each do |player| %>
-      <tr data-player-id="<%= player.id %>">
-        <td data-player-attribute="name"><%= player.name %></td>
-        <td data-player-attribute="number"><%= player.number %></td>
-        <td data-player-attribute="position"><%= player.position %></td>
-        <td data-player-attribute="club"><%= player.club %></td>
-        <td data-player-attribute="team_full_name"><%= player.team.full_name %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <h1>Players</h1>
 
-<br>
+          <div class="row">
+            <div class="col-xs-12">
+              <table class="tbl">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Number</th>
+                    <th>Position</th>
+                    <th>Club</th>
+                    <th>Team</th>
+                    <th colspan="3"></th>
+                  </tr>
+                </thead>
 
-<%= link_to 'New Player', new_player_path %>
+                <tbody>
+                  <% @players.each do |player| %>
+                    <tr data-player-id="<%= player.id %>">
+                      <td data-player-attribute="name"><%= player.name %></td>
+                      <td data-player-attribute="number"><%= player.number %></td>
+                      <td data-player-attribute="position"><%= player.position %></td>
+                      <td data-player-attribute="club"><%= player.club %></td>
+                      <td data-player-attribute="team_full_name"><%= player.team.full_name %></td>
+                      <td><%= link_to 'Show', player %></td>
+                      <td><%= link_to 'Edit', edit_player_path(player) %></td>
+                      <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+          <br>
+
+          <div class="new"><%= link_to 'New Player', new_player_path %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

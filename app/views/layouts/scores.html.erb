@@ -11,9 +11,21 @@
   </head>
 
   <body>
-    <a href="/teams">Team</a>
-    <a href="/players">Players</a>
-    <a href="/scores">Scores</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 top-nav">
+        <ul class="top-nav-link">
+          <li>
+            <a href="/teams">Team</a>
+          </li><li>
+            <a href="/players">Players</a>
+          </li><li>
+            <a href="/scores">Scores</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
     <%= yield %>
   </body>
 </html>
